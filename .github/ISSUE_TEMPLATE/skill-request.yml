@@ -1,0 +1,49 @@
+name: Request a skill
+description: Suggest a new skill, or say you'd like to write one.
+title: "Skill request: "
+labels: ["skill request"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Suggested skill name
+      description: Lowercase letters, numbers and hyphens.
+      placeholder: e.g. ttt2-roles
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - GLua addon development
+        - UI (Derma / VGUI / HUD)
+        - Weapons, entities, tools or NPCs
+        - Gamemode (DarkRP, TTT/TTT2, Helix, Sandbox, other)
+        - Popular addon (Wiremod, PAC3, Starfall, other)
+        - Server hosting and administration
+        - Performance and debugging
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What should the skill help with?
+      description: What would you ask an agent to do? Which mistakes should it help avoid?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official docs or sources
+      description: Links to the wiki, GitHub repo or docs the skill should be based on.
+      placeholder: https://
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This is not about exploits, cheats, backdoors or bypassing anti-cheat.
+          required: true
+        - label: I'd like to write this skill myself (optional, totally fine either way).

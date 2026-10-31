@@ -1,0 +1,54 @@
+name: Incorrect or outdated skill content
+description: A skill has a wrong function name, a broken example, a realm mistake, or outdated advice.
+title: "Fix: "
+labels: ["bug", "accuracy"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which skill?
+      options:
+        - glua-realms-hooks
+        - gmod-net-security
+        - gmod-addon-structure
+        - gmod-swep-sent
+        - derma-ui
+        - darkrp-config
+        - glua-error-debugger
+        - gmod-server-setup
+        - Another skill (say which below)
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What kind of problem?
+      options:
+        - Wrong or non-existent function, hook or field
+        - Code example errors or does not work
+        - Wrong realm (server/client)
+        - Unsafe advice (security)
+        - Outdated (GMod or addon update changed it)
+        - Agent misused the skill or it did not trigger
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What's wrong, and what should it say?
+      description: Quote the part of the skill and explain the fix. Paste any console error as text.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: A wiki page, docs page or source code that shows the correct behaviour.
+      placeholder: https://wiki.facepunch.com/gmod/
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Want to fix it?
+      options:
+        - label: I'm happy to open a pull request for this (optional).

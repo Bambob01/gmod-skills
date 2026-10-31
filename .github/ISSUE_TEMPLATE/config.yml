@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How to contribute
+    url: https://github.com/Bambob01/gmod-skills/blob/main/CONTRIBUTING.md
+    about: Add or improve a skill yourself in about five steps.
+  - name: Garry's Mod wiki
+    url: https://wiki.facepunch.com/gmod/
+    about: The official GLua reference. General GMod help questions are best asked in the GMod community, not here.
